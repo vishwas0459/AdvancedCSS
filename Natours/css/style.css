@@ -84,6 +84,7 @@ body {
 	animation: moveInRight 1s ease-out;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
 	text-decoration: none;
@@ -91,6 +92,7 @@ body {
 	padding: 15px 40px;
 	position: relative;
 	border-radius: 200px;
+	display: inline-block;
 	/* we need to put transition on default state */
 	transition: all 0.2s;
 }
