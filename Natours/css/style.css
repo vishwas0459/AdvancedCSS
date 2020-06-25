@@ -9,22 +9,31 @@ Dark green: #28b485
 
 /* Reset-Normalise */
 
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 
 body {
 	/* we use font-family in body to take advantage of inheritence  */
 	font-family: Lato, sans-serif;
-	font-size: 16px;
+	/* font-size: 16px; */
 	font-weight: 400;
 	line-height: 1.7;
 	padding: 30px;
 	color: #777;
+	box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+	/* 10 / 16 = 62.5% 
+	Default font-size of browser is 16px.
+	*/
+}
 .header {
 	height: 95vh;
 	background-image: linear-gradient(
@@ -41,12 +50,12 @@ body {
 
 .logo-box {
 	position: absolute;
-	top: 40px;
-	left: 40px;
+	top: 4rem;
+	left: 4rem;
 }
 
 .logo {
-	height: 35px;
+	height: 3.5rem;
 }
 
 .hero {
@@ -59,16 +68,16 @@ body {
 .primary-heading {
 	color: #fff;
 	text-transform: uppercase;
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 	/* in case there is shakiness of animation use below property */
 	backface-visibility: hidden;
 }
 
 .primary-heading-main {
 	display: block;
-	font-size: 60px;
+	font-size: 6rem;
 	font-weight: 300;
-	letter-spacing: 35px;
+	letter-spacing: 3.5rem;
 
 	animation-name: moveInLeft;
 	/* animation-timing-function: ease-out; */
@@ -77,9 +86,9 @@ body {
 
 .primary-heading-sub {
 	display: block;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 700;
-	letter-spacing: 17.5px;
+	letter-spacing: 1.75rem;
 
 	animation: moveInRight 1s ease-out;
 }
@@ -89,12 +98,13 @@ body {
 .btn:visited {
 	text-decoration: none;
 	text-transform: uppercase;
-	padding: 15px 40px;
+	padding: 1.5rem 4rem;
 	position: relative;
-	border-radius: 200px;
+	border-radius: 20rem;
 	display: inline-block;
 	/* we need to put transition on default state */
 	transition: all 0.2s;
+	font-size: 1.6rem;
 }
 
 .btn-animated {
@@ -102,13 +112,13 @@ body {
 	animation-fill-mode: backwards;
 }
 .btn:hover {
-	transform: translateY(-10px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	transform: translateY(-1rem);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-	transform: translateY(-5px);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transform: translateY(-0.5rem);
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -121,7 +131,7 @@ body {
 	height: 100%;
 	width: 100%;
 	display: inline-block;
-	border-radius: 200px;
+	border-radius: 20rem;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -142,10 +152,10 @@ body {
 @keyframes moveInLeft {
 	0% {
 		opacity: 0;
-		transform: translateX(-80px);
+		transform: translateX(-8rem);
 	}
 	80% {
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 	100% {
 		opacity: 1;
@@ -156,10 +166,10 @@ body {
 @keyframes moveInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(180px);
+		transform: translateX(18rem);
 	}
 	80% {
-		transform: translateX(-10px);
+		transform: translateX(-1rem);
 	}
 	100% {
 		opacity: 1;
@@ -170,7 +180,7 @@ body {
 @keyframes moveInBottom {
 	0% {
 		opacity: 0;
-		transform: translateY(30px);
+		transform: translateY(3rem);
 	}
 
 	100% {
