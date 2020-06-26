@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	/* we use font-family in body to take advantage of inheritence  */
+	font-family: Lato, sans-serif;
+	/* font-size: 16px; */
+	font-weight: 400;
+	line-height: 1.7;
+	padding: 3rem;
+	color: $color-text-primary;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	/* 10 / 16 = 62.5% 
+	Default font-size of browser is 16px.
+	*/
+}
