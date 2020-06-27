@@ -288,6 +288,49 @@ body {
           transform: translateY(0);
 }
 
+.composition {
+  position: relative;
+}
+
+.composition__img {
+  width: 55%;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+  position: absolute;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 10;
+  outline-offset: 1rem;
+}
+
+.composition__img--p1 {
+  left: 0;
+  top: -2rem;
+}
+
+.composition__img--p2 {
+  right: 0;
+  top: 2rem;
+}
+
+.composition__img--p3 {
+  left: 20%;
+  top: 12rem;
+}
+
+.composition__img:hover {
+  z-index: 20;
+  outline: 0.8rem solid #55c57a;
+  -webkit-transform: translateY(-2px) scale(1.2);
+          transform: translateY(-2px) scale(1.2);
+}
+
+.composition:hover .composition__img:not(:hover) {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .header {
   height: 95vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
