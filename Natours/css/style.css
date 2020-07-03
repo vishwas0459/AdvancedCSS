@@ -190,6 +190,10 @@ body {
   text-align: center;
 }
 
+.u-margin-bottom-huge {
+  margin-bottom: 10rem !important;
+}
+
 .u-margin-bottom-big {
   margin-bottom: 8rem;
 }
@@ -248,6 +252,15 @@ body {
 }
 
 .btn--white::after {
+  background-color: #fff;
+}
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+.btn--green::after {
   background-color: #fff;
 }
 
@@ -324,6 +337,16 @@ body {
   background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
 }
 
+.card__side--back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
+}
+
+.card__side--back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+  background-image: linear-gradient(to bottom right, #2998ff, #5643fa);
+}
+
 .card:hover .card__side--front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
@@ -348,17 +371,19 @@ body {
 }
 
 .card__picture--2 {
-  background-image: url(../img/nat-6.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../img/nat-6.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg);
 }
 
 .card__picture--3 {
-  background-image: url(../img/nat-7.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url(../img/nat-7.jpg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
 }
 
 .card__heading {
   font-size: 2.8rem;
   font-weight: 300;
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
   color: #fff;
   position: absolute;
@@ -367,15 +392,67 @@ body {
   width: 75%;
 }
 
-.card heading-span {
+.card__heading-span {
   padding: 1rem 1.5rem;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
 }
 
-.card heading-span--1 {
+.card__heading-span--1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 48, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
+
+.card__details {
+  padding: 3rem;
+}
+
+.card__details ul {
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.card__details ul li {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  width: 90%;
+  text-align: center;
+}
+
+.card__price-only {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.card__price-value {
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 3rem;
 }
 
 .composition {
@@ -550,7 +627,7 @@ body {
 }
 
 .section-tours {
-  padding: 25rem 0 25rem 0;
+  padding: 25rem 0 10rem 0;
   background-color: rgba(119, 119, 119, 0.15);
   margin-top: -7.5rem;
 }
