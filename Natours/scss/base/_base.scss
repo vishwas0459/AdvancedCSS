@@ -16,4 +16,22 @@ html {
 	/* 10 / 16 = 62.5% 
 	Default font-size of browser is 16px.
 	*/
+
+	@include respond(tab-land) {
+		// w<1200
+		// 1rem=9px; 9/16= 62.5%
+		font-size: 56.25%;
+	}
+
+	@include respond(tab-port) {
+		// w<900
+		// 1rem=8px; 8/16= 50%
+		font-size: 50%;
+	}
+
+	@include respond(big-desk) {
+		// w>1200+
+		// 1rem=12px; 12/16= 62.5%
+		font-size: 75%;
+	}
 }
