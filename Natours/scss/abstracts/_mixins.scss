@@ -6,11 +6,13 @@
 	}
 }
 
+// base + typography > general layout + grid > page layout > component
+
 // 1em =16px
-// 600px - 600/16 =37.5em
-// 900px - 56.25em
-// 1200 - 75em
-// 1800+ -
+// 600px - 600/16 =37.5em -phone
+// 900px - 56.25em -tab-port
+// 1200 - 75em -tab-land
+// 1800+ -big-desk
 
 @mixin respond($brekpoint) {
 	@if $brekpoint == phone {
