@@ -34,7 +34,7 @@
 			left: 20%;
 			top: 10rem;
 			@include respond(tab-port) {
-				top: 1rem;
+				top: 0rem;
 				left: 0;
 				transform: scale(1.2);
 				z-index: 9;
