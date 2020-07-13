@@ -1,0 +1,107 @@
+// logo
+////////////////////////////////
+
+.logo {
+	width: 3.25rem;
+	margin-left: 2rem;
+}
+
+// search bar
+////////////////////////////////
+.search {
+	display: flex;
+	flex: 0 0 40%;
+	align-items: center;
+	justify-content: center;
+	&__input {
+		border: none;
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		width: 90%;
+		padding: 0.7rem 3.5rem;
+		border-radius: 200px;
+		transition: all 0.3s;
+		background-color: var(--color-grey-light-3);
+		margin-right: -3rem;
+		&:focus {
+			outline: none;
+			width: 100%;
+			background-color: var(--color-grey-light-3);
+		}
+
+		&::placeholder {
+			font-weight: 100;
+			color: var(--color-grey-light-4);
+		}
+	}
+
+	&__input:focus + &__btn {
+		background-color: var(--color-grey-light-3);
+	}
+
+	&__btn {
+		border: none;
+		background-color: var(--color-grey-light-3);
+		font-size: 1.7rem;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&:active {
+			transform: translateY(2px);
+		}
+	}
+	&__icon {
+		width: 2rem;
+		height: 2rem;
+		fill: var(--color-grey-dark-1);
+	}
+}
+
+// User navigation
+////////////////////////////////
+.user-nav {
+	display: flex;
+	align-self: stretch;
+	& > * {
+		padding: 0 2rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+	}
+	& > *:hover {
+		background-color: var(--color-grey-light-2);
+	}
+	&__icon-box {
+		position: relative;
+	}
+	&__icon {
+		width: 2.25rem;
+		height: 2.25rem;
+		fill: var(--color-grey-dark-2);
+	}
+	&__notification {
+		font-size: 0.8rem;
+		height: 1.75rem;
+		width: 1.75rem;
+		border-radius: 50%;
+		background-color: var(--color-primary);
+		color: #fff;
+		position: absolute;
+		right: 1.1rem;
+		top: 2rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__photo {
+		margin-right: 1rem;
+		width: 3.75rem;
+		border-radius: 50%;
+	}
+}

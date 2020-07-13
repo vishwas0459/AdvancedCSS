@@ -15,12 +15,14 @@
 <body>
     <div class="container">
         <header class="header">
-            <img src="./img/logo.png" alt="Logo" class="logo">
+            <div class="header__logo">
+                <img src="./img/logo.png" alt="logo" class="header__img" />
+            </div>
             <form action="#" class="search">
-                <input type="text" class="search__input" placeholder="Search hotels" />
-                <button class="search__btn">
+                <input type="text" class="search__input" placeholder="Search Hotels" />
+                <button class="search__button">
                     <svg class="search__icon">
-                        <use xlink:href="./img/sprite.svg#icon-magnifying-glass"></use>
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
                     </svg>
                 </button>
             </form>
@@ -38,14 +40,14 @@
                     <span class="user-nav__notification">13</span>
                 </div>
                 <div class="user-nav__user">
-                    <img src="./img/user.jpg" alt="User" class="user-nav__photo" />
-                    <span class="user-nav__username">Jonas</span>
+                    <img src="img/user.jpg" alt="user photo" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Jonas</span>
                 </div>
             </nav>
         </header>
         <div class="content">
-            <nav class="sidebar">Navigation</nav>
-            <main class="hotel-view">Main</main>
+            <nav class="sidebar">Sidebar</nav>
+            <main class="main">Hotels</main>
         </div>
     </div>
 </body>
