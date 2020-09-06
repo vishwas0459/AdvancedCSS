@@ -1,15 +1,26 @@
+// Utils
+.mb-sm {
+	margin-bottom: 2rem;
+}
+.mb-md {
+	margin-bottom: 3rem;
+}
+.mb-lg {
+	margin-bottom: 4rem;
+}
+.mb-hg {
+	margin-bottom: 8rem;
+}
+
 %heading {
 	font-family: $font-display;
 	font-weight: 400;
 }
 
-.heading-2 {
-	@extend %heading;
-}
 .heading-1 {
 	@extend %heading;
 }
-.heading-3 {
+.heading-2 {
 	@extend %heading;
 	font-size: 1.9rem;
 	&--light {
@@ -19,6 +30,34 @@
 		color: $color-grey-dark-1;
 	}
 }
+.heading-3 {
+	@extend %heading;
+	font-size: 4rem;
+	line-height: 1;
+	font-style: italic;
+	&--light {
+		color: $color-grey-light-1;
+	}
+	&--dark {
+		color: $color-grey-dark-1;
+	}
+}
 .heading-4 {
 	@extend %heading;
+}
+
+.btn {
+	border: none;
+	background-color: $color-primary;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 1.8rem 3rem;
+	font-family: $font-display;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-primary-dark;
+		transition: all 0.2s;
+	}
 }
